@@ -23,8 +23,13 @@ For example, to try the hello world example first run:
 
 And in a different terminal window run:
 
-	./build/install/WalletServer/bin/grpc-client
+	./build/install/WalletServer/bin/grpc-client users=1 concurrent_threads_per_user=1 rounds_per_thread=1
+	
+The wallet client has the following CLI parameters:
+* users (number of concurrent users emulated)
+* concurrent_threads_per_user (number of concurrent requests a user will make)
+* rounds_per_thread (number of rounds each thread is executing)
 
-To run the tests:
+To run the integration test:
 
 	./gradlew test
