@@ -3,13 +3,13 @@
 This project consists of a wallet server and a wallet client. The wallet server will keep track of a users monetary balance in the system. The client will emulate users depositing and withdrawing funds.
 
 Main Technologies used:
-*Java
-*gRPC
-*Hibernate
-*PostgreSQL
-*Gradle
-*JUnit
-*SLF4J
+* Java
+* gRPC
+* Hibernate
+* PostgreSQL
+* Gradle
+* JUnit
+* SLF4J
 
 To build the examples, run in this directory:
 
