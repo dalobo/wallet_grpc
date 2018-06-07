@@ -1,10 +1,56 @@
-*target*
+# Directories #
+/build/classes/
+/build/distributions/
+/build/extracted-include-protos/
+/build/extracted-protos/
+/build/install/
+/build/libs/
+/build/reports/
+/build/resources/
+/build/test-results/
+/bin/
+target/
+ 
+# OS Files #
+.DS_Store
+ 
+*.class
+ 
+# Package Files #
 *.jar
 *.war
 *.ear
-*.class
-
-# eclipse specific git ignore
+*.db
+ 
+######################
+# Windows
+######################
+ 
+# Windows image file caches
+Thumbs.db 
+ 
+# Folder config file
+Desktop.ini
+ 
+######################
+# OSX
+######################
+ 
+.DS_Store
+.svn
+ 
+# Thumbnails
+._*
+ 
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+ 
+ 
+######################
+# Eclipse
+######################
+ 
 *.pydevproject
 .project
 .metadata
@@ -20,9 +66,15 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
+/src/main/resources/rebel.xml
 # External tool builders
 .externalToolBuilders/
-
+ 
 # Locally stored "Eclipse launch configurations"
 *.launch
+ 
+# CDT-specific
+.cproject
+ 
+# PDT-specific
+.buildpath
