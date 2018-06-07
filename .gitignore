@@ -10,6 +10,7 @@
 /build/test-results/
 /bin/
 target/
+/.gradle/
  
 # OS Files #
 .DS_Store
