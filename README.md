@@ -21,11 +21,11 @@ To build the examples, run in this directory:
 
 This creates the scripts grpc-server and grpc-client in the build/install/examples/bin/ directory that run the examples. Each example requires the server to be running before starting the client.
 
-For example, to try the hello world example first run:
+First run the server:
 
 	./build/install/WalletServer/bin/grpc-server
 
-And in a different terminal window run:
+And in a different terminal window run the client:
 
 	./build/install/WalletServer/bin/grpc-client users=1 concurrent_threads_per_user=1 rounds_per_thread=1
 	
