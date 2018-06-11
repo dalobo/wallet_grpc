@@ -19,6 +19,7 @@ target/
  
 # Package Files #
 *.jar
+!gradle/**/*.jar
 *.war
 *.ear
 *.db

@@ -72,16 +72,15 @@ public class WalletManager {
 
 		Wallet dbWallet = session.get(Wallet.class, wallet.getKey());
 
-		if (dbWallet == null) {
-			LOGGER.debug("Saving new wallet for user id:" + wallet.getKey().getUserId() + ", currency: "
-					+ wallet.getKey().getCurrency() + ", amount: " + wallet.getAmount());
-			session.save(wallet);
-		} else {
+		if (dbWallet != null) {
 			dbWallet.setAmount(wallet.getAmount() + dbWallet.getAmount());
-			LOGGER.debug("Saving updating wallet for user id:" + dbWallet.getKey().getUserId() + ", currency: "
-					+ dbWallet.getKey().getCurrency() + ", new amount: " + dbWallet.getAmount());
-			session.update(dbWallet);
+		} else {
+			dbWallet = wallet;
 		}
+
+		LOGGER.debug("Saving/updating wallet for user id:" + dbWallet.getKey().getUserId() + ", currency: "
+				+ dbWallet.getKey().getCurrency() + ", new amount: " + dbWallet.getAmount());
+		session.saveOrUpdate(dbWallet);
 
 		session.getTransaction().commit();
 		session.close();
