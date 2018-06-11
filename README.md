@@ -11,6 +11,10 @@ Main Technologies used:
 * JUnit
 * SLF4J
 
+Before installing, make sure you have a postgresql running in localhost:5432. Please, set your user/password and database in hibernate.cfg.xml.
+
+This project is not working in Docker yet. 
+
 To build the examples, run in this directory:
 
 	./gradlew installDist
